@@ -20,6 +20,7 @@ public class Immobili {
         this.cap = cap;
         this.citta = citta;
         this.superficieMq = superficieMq;
+        numeroInteresssati = getNumeroInteresssati();
     }
 
 
@@ -54,10 +55,11 @@ public class Immobili {
     }
 
     //metodo per incrementare numero persone interessate all'acquisto dell'immobile
-    public void incrementaNumeroInteressati()
+    public void incrementaNumeroInteressati(int numeroInteresssatiInput)
     {
 
-        numeroInteresssati = numeroInteresssati +1;
+       numeroInteresssati = numeroInteresssati + numeroInteresssatiInput;
+
     }
 
     //metodo reimpostaSuperfici che prende in input la nuova superficie.

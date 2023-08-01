@@ -8,7 +8,6 @@ public class Villa extends Abitazione {
     //COSTRUTTORE
     public Villa(String codiceAlfanumerico, String indirizzo, int cap, String citta, int superficieMq, int numeroVani, int numeroBagni, int dimensioneGiardinoMq) {
         super(codiceAlfanumerico, indirizzo, cap, citta, superficieMq, numeroVani, numeroBagni);
-
         this.dimensioneGiardinoMq = dimensioneGiardinoMq;
 
     }

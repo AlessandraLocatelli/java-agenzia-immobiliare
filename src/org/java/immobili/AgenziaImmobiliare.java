@@ -51,12 +51,20 @@ public class AgenziaImmobiliare {
     //metodo trova immobile con maggior numero di interessati
     public Immobili trovaImmobileConMaggiorNumeroInteressati()
     {
-        Immobili immobileConMaggiorNumeroInteressati = null;
+           int maggiornumeroPersoneInteressate = 0;
+           Immobili immobileDiMaggiorInteresse = null;
 
+           for(Immobili immobile : listaImmobili)
+           {
+               int numeroInteresssati = immobile.getNumeroInteresssati();
+               if(numeroInteresssati > maggiornumeroPersoneInteressate )
+                   maggiornumeroPersoneInteressate = numeroInteresssati;
+                   immobileDiMaggiorInteresse = immobile;
 
+           }
 
+         return immobileDiMaggiorInteresse;
 
-         return  immobileConMaggiorNumeroInteressati;
     }
 
 
