@@ -53,11 +53,8 @@ public class AgenziaImmobiliare {
     {
         Immobili immobileConMaggiorNumeroInteressati = null;
 
-          for (Immobili immobili : listaImmobili)
-          {
 
 
-          }
 
          return  immobileConMaggiorNumeroInteressati;
     }

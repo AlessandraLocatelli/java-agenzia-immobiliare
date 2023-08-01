@@ -52,6 +52,11 @@ public class Main {
                         int nuovaSuperficieInput = Integer.parseInt(sc.nextLine());
                         box.reimpostaSuperfici(nuovaSuperficieInput);
                     }
+                    System.out.println("Sei interessato/a all'immobile "+box+" ?(y/n)");
+                    if(sceltaInput.equalsIgnoreCase("y"))
+                    {
+                        box.incrementaNumeroInteressati();
+                    }
                     break;
 
                 case "2":
@@ -68,6 +73,11 @@ public class Main {
                         System.out.println("Inserisci nuova superficie: ");
                         int nuovaSuperficieInput = Integer.parseInt(sc.nextLine());
                         abitazione.reimpostaSuperfici(nuovaSuperficieInput);
+                    }
+                    System.out.println("Sei interessato/a all'immobile "+abitazione+" ?(y/n)");
+                    if(sceltaInput.equalsIgnoreCase("y"))
+                    {
+                        abitazione.incrementaNumeroInteressati();
                     }
                     break;
 
@@ -90,6 +100,11 @@ public class Main {
                         int nuovaDimensioneInput = Integer.parseInt(sc.nextLine());
                         villa.reimpostaSuperfici(nuovaSuperficieInput,nuovaDimensioneInput);
                     }
+                    System.out.println("Sei interessato/a all'immobile "+villa+" ?(y/n)");
+                    if(sceltaInput.equalsIgnoreCase("y"))
+                    {
+                        villa.incrementaNumeroInteressati();
+                    }
                     break;
 
                 default:
@@ -108,6 +123,7 @@ public class Main {
         System.out.println("Cerchi un immobile? Inserisci il suo codice alfanumerico: ");
         String codiceImmobileDaCercare  = sc.nextLine();
         System.out.println(agenziaImmobiliare.cercaImmobile(codiceImmobileDaCercare));
+
 
 
 
