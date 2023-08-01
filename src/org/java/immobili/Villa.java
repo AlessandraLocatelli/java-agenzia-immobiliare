@@ -6,8 +6,8 @@ public class Villa extends Abitazione {
     int dimensioneGiardinoMq;
 
     //COSTRUTTORE
-    public Villa(String codiceAlfanumerico, String indirizzo, int cap, String citta, int numeroInteresssati, int superficieMq, int numeroVani, int numeroBagni, int dimensioneGiardinoMq) {
-        super(codiceAlfanumerico, indirizzo, cap, citta, numeroInteresssati, superficieMq, numeroVani, numeroBagni);
+    public Villa(String codiceAlfanumerico, String indirizzo, int cap, String citta, int superficieMq, int numeroVani, int numeroBagni, int dimensioneGiardinoMq) {
+        super(codiceAlfanumerico, indirizzo, cap, citta, superficieMq, numeroVani, numeroBagni);
 
         this.dimensioneGiardinoMq = dimensioneGiardinoMq;
 
@@ -18,6 +18,12 @@ public class Villa extends Abitazione {
     //overload metodo reimposta superficie con aggiunta parametro superficieGiardino
 
 
+
+    public void reimpostaSuperfici(int nuovaSuperficie, int superficieGiardino) {
+
+        setSuperficieMq(nuovaSuperficie);
+        this.dimensioneGiardinoMq = superficieGiardino;
+    }
 
     @Override
     public String toString() {

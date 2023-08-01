@@ -7,8 +7,9 @@ public class Abitazione extends Immobili{
     private int numeroBagni;
 
     //COSTRUTTORE
-    public Abitazione(String codiceAlfanumerico, String indirizzo, int cap, String citta, int numeroInteresssati, int superficieMq, int numeroVani, int numeroBagni) {
-        super(codiceAlfanumerico, indirizzo, cap, citta, numeroInteresssati, superficieMq);
+
+    public Abitazione(String codiceAlfanumerico, String indirizzo, int cap, String citta, int superficieMq, int numeroVani, int numeroBagni) {
+        super(codiceAlfanumerico, indirizzo, cap, citta, superficieMq);
         this.numeroVani = numeroVani;
         this.numeroBagni = numeroBagni;
     }

@@ -6,8 +6,8 @@ public class Box extends Immobili {
     private int numeroPostiAuto;
 
     //COSTRUTTORE
-    public Box(String codiceAlfanumerico, String indirizzo, int cap, String citta, int numeroInteresssati, int superficieMq, int numeroPostiAuto) {
-        super(codiceAlfanumerico, indirizzo, cap, citta, numeroInteresssati, superficieMq);
+    public Box(String codiceAlfanumerico, String indirizzo, int cap, String citta, int superficieMq, int numeroPostiAuto) {
+        super(codiceAlfanumerico, indirizzo, cap, citta, superficieMq);
 
         this.numeroPostiAuto = numeroPostiAuto;
 

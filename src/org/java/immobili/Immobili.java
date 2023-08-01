@@ -14,12 +14,11 @@ public class Immobili {
 
     //COSTRUTTORE
 
-    public Immobili(String codiceAlfanumerico, String indirizzo, int cap, String citta, int numeroInteresssati, int superficieMq) {
+    public Immobili(String codiceAlfanumerico, String indirizzo, int cap, String citta, int superficieMq) {
         this.codiceAlfanumerico = codiceAlfanumerico;
         this.indirizzo = indirizzo;
         this.cap = cap;
         this.citta = citta;
-        this.numeroInteresssati = numeroInteresssati;
         this.superficieMq = superficieMq;
     }
 
@@ -30,6 +29,9 @@ public class Immobili {
     {
         return getSuperficieMq();
     }
+
+    public void setSuperficieMq(int superficieMq)
+    {this.superficieMq = superficieMq;}
 
     public String getCodiceAlfanumerico() {
         return codiceAlfanumerico;
@@ -54,6 +56,7 @@ public class Immobili {
     //metodo per incrementare numero persone interessate all'acquisto dell'immobile
     public void incrementaNumeroInteressati()
     {
+
         numeroInteresssati++;
     }
 
