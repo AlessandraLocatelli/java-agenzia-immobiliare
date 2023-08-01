@@ -57,7 +57,7 @@ public class Immobili {
     public void incrementaNumeroInteressati()
     {
 
-        numeroInteresssati++;
+        numeroInteresssati = numeroInteresssati +1;
     }
 
     //metodo reimpostaSuperfici che prende in input la nuova superficie.

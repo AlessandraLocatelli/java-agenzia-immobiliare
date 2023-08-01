@@ -44,6 +44,14 @@ public class Main {
                     int numeroPostiAutoInput = Integer.parseInt(sc.nextLine());
                     Box box = new Box(codiceAlfanumericoInput,indirizzoInput,capInput,cittaInput,superficieMqInput,numeroPostiAutoInput);
                     agenziaImmobiliare.aggiungiImmobile(box);
+                    System.out.println("Vuoi modificare la superficie di "+box+"  ?(y/n)");
+                    String sceltaInput = sc.nextLine();
+                    if(sceltaInput.equalsIgnoreCase("y"))
+                    {
+                        System.out.println("Inserisci nuova superficie: ");
+                        int nuovaSuperficieInput = Integer.parseInt(sc.nextLine());
+                        box.reimpostaSuperfici(nuovaSuperficieInput);
+                    }
                     break;
 
                 case "2":
@@ -53,6 +61,14 @@ public class Main {
                     int numeroBagniAbitazioneInput = Integer.parseInt(sc.nextLine());
                     Abitazione abitazione = new Abitazione(codiceAlfanumericoInput,indirizzoInput,capInput,cittaInput,superficieMqInput,numeroVaniAbitazioneInput,numeroBagniAbitazioneInput);
                     agenziaImmobiliare.aggiungiImmobile(abitazione);
+                    System.out.println("Vuoi modificare la superficie di "+abitazione+"  ?(y/n)");
+                    sceltaInput = sc.nextLine();
+                    if(sceltaInput.equalsIgnoreCase("y"))
+                    {
+                        System.out.println("Inserisci nuova superficie: ");
+                        int nuovaSuperficieInput = Integer.parseInt(sc.nextLine());
+                        abitazione.reimpostaSuperfici(nuovaSuperficieInput);
+                    }
                     break;
 
                 case "3":
@@ -64,6 +80,16 @@ public class Main {
                     int dimensioneGiardinoMqInput = Integer.parseInt(sc.nextLine());
                     Villa villa = new Villa(codiceAlfanumericoInput,indirizzoInput,capInput,cittaInput,superficieMqInput,numeroVaniVillaInput,numeroBagniVillaInput,dimensioneGiardinoMqInput);
                     agenziaImmobiliare.aggiungiImmobile(villa);
+                    System.out.println("Vuoi modificare la dimensione del giardino di "+villa+"  ?(y/n)");
+                    sceltaInput = sc.nextLine();
+                    if(sceltaInput.equalsIgnoreCase("y"))
+                    {
+                        System.out.println("Inserisci nuova superficie: ");
+                        int nuovaSuperficieInput = Integer.parseInt(sc.nextLine());
+                        System.out.println("Inserisci nuova dimesione giardino: ");
+                        int nuovaDimensioneInput = Integer.parseInt(sc.nextLine());
+                        villa.reimpostaSuperfici(nuovaSuperficieInput,nuovaDimensioneInput);
+                    }
                     break;
 
                 default:
@@ -78,6 +104,10 @@ public class Main {
 
         System.out.println("CREAZIONE CATALOGO");
         System.out.println(agenziaImmobiliare.getListaImmobili());
+
+        System.out.println("Cerchi un immobile? Inserisci il suo codice alfanumerico: ");
+        String codiceImmobileDaCercare  = sc.nextLine();
+        System.out.println(agenziaImmobiliare.cercaImmobile(codiceImmobileDaCercare));
 
 
 
