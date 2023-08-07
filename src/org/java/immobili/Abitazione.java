@@ -1,21 +1,17 @@
 package org.java.immobili;
 
-public class Abitazione extends Immobili{
+public class Abitazione extends Immobile {
 
-    //CAMPI
     private int numeroVani;
     private int numeroBagni;
 
-    //COSTRUTTORE
-
-    public Abitazione(String codiceAlfanumerico, String indirizzo, int cap, String citta, int superficieMq, int numeroVani, int numeroBagni) {
-        super(codiceAlfanumerico, indirizzo, cap, citta, superficieMq);
+    public Abitazione(String codiceAlfanumerico, String indirizzo, String cap, String citta, int superfice, int numeroVani, int numeroBagni)
+    {
+        super(codiceAlfanumerico,indirizzo,cap,citta,superfice);
         this.numeroVani = numeroVani;
         this.numeroBagni = numeroBagni;
+
     }
-
-
-    //METODI
 
     public int getNumeroVani() {
         return numeroVani;
@@ -25,11 +21,11 @@ public class Abitazione extends Immobili{
         return numeroBagni;
     }
 
+
     @Override
     public String toString() {
-        return "Abitazione{" + super.toString()+
-                "numeroVani=" + numeroVani +
-                ", numeroBagni=" + numeroBagni +
-                '}';
+        return  "Abitazione="+super.toString()+
+                " ,numero vani=" + numeroVani +
+                " ,numero bagni=" + numeroBagni;
     }
 }

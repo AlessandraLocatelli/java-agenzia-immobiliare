@@ -1,74 +1,66 @@
 package org.java.immobili;
 
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class AgenziaImmobiliare {
 
-    //CAMPI
-    private List<Immobili> listaImmobili;
 
+   ArrayList<Immobile> listaImmobili;
 
-    //COSTRUTTORE
 
 
     public AgenziaImmobiliare() {
+
         listaImmobili = new ArrayList<>();
     }
 
-    //METODI
-    public List<Immobili> getListaImmobili() {
+    public ArrayList<Immobile> getListaImmobili() {
         return listaImmobili;
     }
 
-    public void aggiungiImmobile(Immobili immobile)
-    {
-        listaImmobili.add(immobile);
 
+    public void aggiungiImmobile(Immobile i)
+    {
+        listaImmobili.add(i);
     }
 
-    public Immobili cercaImmobile(String codiceImmobile)
+    public Immobile cercaImmobileTramiteCodiceAlfanumerico(String codiceImmobile)
     {
-        int index = 0;
-        boolean trovato = false;
-        Immobili immobileTrovato = null;
-
-        while (!trovato && index < listaImmobili.size())
+        for (Immobile i : listaImmobili)
         {
-            if(codiceImmobile.equals(listaImmobili.get(index).getCodiceAlfanumerico()))
+            if(i.getCodiceAlfanumerico().equals(codiceImmobile))
             {
-                immobileTrovato = listaImmobili.get(index);
-                trovato = true;
-
+                return i;
             }
 
-            index++;
         }
 
-        return immobileTrovato;
+        return null;
+
+
     }
 
-    //metodo trova immobile con maggior numero di interessati
-    public Immobili trovaImmobileConMaggiorNumeroInteressati()
+
+    public Immobile getImmobileConMaggiorNumeroInteressati()
     {
-        if(listaImmobili.size() == 0)
-        {
-            return null;
-        }
+              Immobile maxImmobile = null;
+              int max = -1;
 
-           int maggiornumeroPersoneInteressate = -1;
-           Immobili immobileDiMaggiorInteresse = null;
+              for(Immobile i : listaImmobili) {
+                  int maxPersoneInteressate = i.getNumeroInteressati();
 
-           for(Immobili immobile : listaImmobili)
-           {
-               int numeroInteresssati = immobile.getNumeroInteresssati();
-               if(numeroInteresssati > maggiornumeroPersoneInteressate )
-                   maggiornumeroPersoneInteressate = numeroInteresssati;
-                   immobileDiMaggiorInteresse = immobile;
+                  if (maxPersoneInteressate > max)
+                  {
+                      max = maxPersoneInteressate;
+                      maxImmobile = i;
 
-           }
+                  }
 
-         return immobileDiMaggiorInteresse;
+
+              }
+
+              return maxImmobile;
 
     }
 

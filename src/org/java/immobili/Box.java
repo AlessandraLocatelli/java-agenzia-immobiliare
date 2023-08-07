@@ -1,27 +1,23 @@
 package org.java.immobili;
 
-public class Box extends Immobili {
+public class Box extends Immobile {
 
-    //CAMPI
     private int numeroPostiAuto;
 
-    //COSTRUTTORE
-    public Box(String codiceAlfanumerico, String indirizzo, int cap, String citta, int superficieMq, int numeroPostiAuto) {
-        super(codiceAlfanumerico, indirizzo, cap, citta, superficieMq);
+    public Box(String codiceAlfanumerico, String indirizzo, String cap, String citta, int superfice, int numeroPostiAuto) {
+        super(codiceAlfanumerico, indirizzo, cap, citta, superfice);
 
         this.numeroPostiAuto = numeroPostiAuto;
-
     }
 
-    //METODI
     public int getNumeroPostiAuto() {
         return numeroPostiAuto;
     }
 
+
     @Override
     public String toString() {
-        return "Box{" + super.toString()+
-                "numeroPostiAuto=" + numeroPostiAuto +
-                '}';
+        return  "Box=" +super.toString()+
+                " ,numero posti auto=" + numeroPostiAuto;
     }
 }
